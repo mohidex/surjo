@@ -1,3 +1,4 @@
+use chrono::Utc;
 use surjo::*;
 
 fn main() {
@@ -10,4 +11,9 @@ fn main() {
     // Convert back to degrees
     let converted_back: Angle<Degrees> = angle_in_radians.into();
     println!("Angle: {:?}", converted_back);
+
+    let dt = Utc::now();
+    println!("Current UTC time: {:?}", dt);
+    let jd: JDay<JulianDay> = dt.into();
+    println!("Julian Day: {:?}", jd);
 }
