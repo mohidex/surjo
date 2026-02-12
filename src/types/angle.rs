@@ -1,4 +1,4 @@
-const PI: f64 = std::f64::consts::PI;
+use std::f64::consts::PI;
 use std::marker::PhantomData;
 
 use super::error::AngleError;

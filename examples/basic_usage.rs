@@ -16,4 +16,7 @@ fn main() {
     println!("Current UTC time: {:?}", dt);
     let jd: JDay<JulianDay> = dt.into();
     println!("Julian Day: {:?}", jd);
+
+    let deltat: DeltaT = dt.try_into().unwrap();
+    println!("Delta T: {:?}", deltat);
 }
